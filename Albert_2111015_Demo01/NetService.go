@@ -21,7 +21,7 @@ func main() {
 		}
 
 		fmt.Println("A client connected.")
-		go handle(connect) //启了一个协程
+		go handle(connect) //启了一个协程,处处是异步，应对大并发
 	}
 }
 
