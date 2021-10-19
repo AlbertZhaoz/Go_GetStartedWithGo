@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
+	math.MaxFloat32 //float32最大值
+
 	const(
 		n1 = iota //实现类似枚举的效果
 		n2
@@ -43,6 +48,9 @@ func DeclareVariable()  {
 	fmt.Println("The name of author is %s",author)
 	x,_:=Foo()
 	fmt.Println(x)
+	//十六进制
+	sixteen := 0x0010
+	fmt.Println("我是十六进制数",sixteen)
 }
 
 func Foo()(int,string)  {
