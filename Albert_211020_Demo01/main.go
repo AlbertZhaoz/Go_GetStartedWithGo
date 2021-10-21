@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"unicode"
 )
 
 func main() {
@@ -40,4 +41,32 @@ func main() {
 	fmt.Println(strings.HasSuffix(sprintfWord,"理"))
 	//Join：在字符串数组中，用sep连接起来
 	fmt.Println(strings.Join(ret,"+"))
+
+	//其他字符rune类型，Go语言中为了处理非ASCII码类型的字符，定义了新的rune类型
+	s :="helloalbert"
+	fmt.Println(len(s))
+
+	for _, v := range s {
+		fmt.Printf("%c\n",v)
+	}
+
+	//字符串修改，先把string类型转换成rune[]切片，修改rune[]切片数组中的字符，再强制转换为string
+	sRune := "albert is very handsome"
+	sTRune := []rune(sRune)
+	sTRune[0] = 'A' //表示字符，字符数组，切片可以理解为字符数组，但是这边的字符是int32类型，而不是char类型的
+	fmt.Println(string(sTRune))
+	fmt.Println(CountChineseCharaters())
+}
+
+//统计汉字个数
+func CountChineseCharaters()(int)  {
+	s:="hello赵先生"
+	var count int
+	for _, v := range s {
+		if(unicode.Is(unicode.Han,v)){
+			count++
+		} 
+	}
+	return count
+	
 }
