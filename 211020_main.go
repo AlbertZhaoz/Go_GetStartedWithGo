@@ -11,7 +11,7 @@ func main() {
 	const(
 		n1 = iota //实现类似枚举的效果
 		n2
-		n3
+		n3 = 3
 		n4
 	)
 	const(
