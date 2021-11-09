@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	math.MaxFloat32 //float32最大值
+	var albertAbility = math.MaxFloat32 //float32最大值
 
 	const(
 		n1 = iota //实现类似枚举的效果
@@ -27,6 +27,7 @@ func main() {
 	
 
 	fmt.Println("我是iota累计四次的数:",n4)
+	fmt.Println(albertAbility)
 
 	fmt.Println("albert")
 	var sl string = "Hello albert"
