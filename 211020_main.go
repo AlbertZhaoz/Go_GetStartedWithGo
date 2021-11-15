@@ -3,10 +3,17 @@ package main
 import (
 	"fmt"
 	"math"
+	"flag"
+	"github.com/golang/glog"
 )
 
 func main() {
 	var albertAbility = math.MaxFloat32 //float32最大值
+
+	flag.Parse()
+    fmt.Println("Hello World!")
+    glog.Info("glog Hello World!")
+    glog.Flush()
 
 	const(
 		n1 = iota //实现类似枚举的效果
