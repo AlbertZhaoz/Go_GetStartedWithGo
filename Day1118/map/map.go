@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"strings"
+	"sort"
+	"fmt"
+)
 
 func main() {
 	//关于Go中，指针只起到取地址和取值两个功能，前者&，后者*
@@ -59,5 +63,35 @@ func main() {
 	//删除map中的元素 delete(map,key)
 	delete(userInfo, "username")
 	fmt.Println(userInfo)
-	//按照指定顺序遍历map
+
+	//对字典进行排序
+	dicStuManager := make(map[string]int,6)
+	dicStuManager["AlbertZhao"] = 15
+	dicStuManager["AlbertLi"] = 14
+	dicStuManager["AlbertChen"] = 13
+	dicStuManager["AlbertHuang"] = 12
+
+	listStuNames := make([]string,10,20)
+	for key := range dicStuManager {
+		listStuNames = append(listStuNames, key)
+	}
+
+	sort.Strings(listStuNames)
+	for _, key := range listStuNames {
+		fmt.Println(key,dicStuManager[key])
+	}
+
+	//写一个程序，统计一个字符串中每个单词出现的次数。比如：”how do you do”中how=1 do=2 you=1。
+	words := "how do you do"
+	splits := strings.Split(words, " ")
+	dicWords := make(map[string]int,5)
+	for _, v := range splits {
+		_,ok := dicWords[v]
+		if !ok {
+			dicWords[v] = 1
+		}else{
+			dicWords[v]++
+		}
+	}
+	fmt.Println(dicWords)	
 }
