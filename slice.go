@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"sort"
+	"fmt"	
 	"strings"
+	"sort"
 )
 
 func main() {
@@ -50,11 +50,10 @@ func main() {
 
 	//排序,排序这种长度不定的数组要先转换为切片再进行排序
 	var arrAge = [...]int{3, 7, 5, 6, 9, 5, 4, 1}
-	arrAgeList := arrAge[:]
-	sort.Ints(arrAgeList)
-	fmt.Println(arrAgeList)
-	for i := 0; i < len(arrAgeList); i++ {
-		fmt.Println(arrAgeList[i])
+	sort.Ints(arrAge[:])
+	fmt.Println(arrAge)
+	for i := 0; i < len(arrAge); i++ {
+		fmt.Println(arrAge[i])
 	}
 
 	//strings.Contains
