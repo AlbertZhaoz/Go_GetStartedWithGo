@@ -1,4 +1,4 @@
-package test
+package main
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"github.com/golang/glog"
 )
 
-func main() {
+func tet() {
 	var albertAbility = math.MaxFloat32 //float32最大值
 
 	flag.Parse()

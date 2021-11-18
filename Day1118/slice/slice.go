@@ -1,15 +1,16 @@
 package main
 
 import (
-	"fmt"	
-	"strings"
+	"fmt"
 	"sort"
+	"strings"
 )
 
 func main() {
 	//切片声明1
 	var stuList []string
 	//切片插值
+	stuList = append(stuList, "AlbertZhao", "AlbertChen")
 	stuList = append(stuList, "AlbertZhao", "AlbertChen")
 	//切片遍历，index为索引，可以用_来占位 v是元素，range后是遍历的对象
 	for index, v := range stuList {
@@ -75,5 +76,4 @@ func main() {
 	default:
 		fmt.Println("不相等")
 	}
-
 }

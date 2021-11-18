@@ -1,10 +1,10 @@
-package test
+package main
 
 import(
 	"fmt"
 )
 
-func main()  {
+func tessgg()  {
 	//作用域age只在条件判断语句中生效
 	if age:=19;age>18{
 		fmt.Println("hello")

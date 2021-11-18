@@ -1,4 +1,4 @@
-package test
+package main
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"unicode"
 )
 
-func main() {
+func test888() {
 	f1 := 1.725649
 	fmt.Printf("此是f1的类型%T\n",f1)
 	//fmt.Println("xxx is %f",f1) 

@@ -1,3 +1,5 @@
-module 211116_main.go
+module albertzhao
 
 go 1.17
+
+require github.com/golang/glog v1.0.0 // indirect

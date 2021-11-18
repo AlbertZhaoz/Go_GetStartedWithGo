@@ -1,8 +1,8 @@
-package test
+package main
 
 import "fmt"
 
-func main()  {
+func test3()  {
 	stuNameSlice := []string{"albertzhao","albertchen","albertli"}
 	for _, v := range stuNameSlice {
 		fmt.Println(v)
